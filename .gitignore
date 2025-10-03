@@ -1,24 +1,37 @@
-# Virtual Environments
+# Virtual Environments (specific folder names)
+linkedin-gmail/mcp-gmail-env/
+sqlite/mcp-env/
+
+# Or use wildcards to catch any venv folder
+**/mcp-env/
+**/mcp-gmail-env/
 **/venv/
 **/env/
 **/ENV/
-**/mcp-env/
-**/mcp-gmail-env/
 
-# Credentials
+# Credentials (CRITICAL)
 **/credentials.json
 **/token.json
+
+# Database files
 **/*.db
+**/*.sqlite
+**/*.sqlite3
 
 # Python
 **/__pycache__/
 **/*.pyc
 **/*.pyo
+*.py[cod]
 
 # IDE
 .vscode/
 .idea/
+*.swp
 
 # OS
 .DS_Store
 Thumbs.db
+
+# Logs
+*.log
