@@ -2,6 +2,8 @@
 **/venv/
 **/env/
 **/ENV/
+**/mcp-env/
+**/mcp-gmail-env/
 
 # Credentials
 **/credentials.json
