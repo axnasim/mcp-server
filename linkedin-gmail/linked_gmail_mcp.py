@@ -58,7 +58,16 @@ class LinkedInGmailServer:
                     )
                 flow = InstalledAppFlow.from_client_secrets_file(
                     credentials_path, SCOPES)
-                creds = flow.run_local_server(port=0)
+
+                # Print the URL for manual opening
+                auth_url, _ = flow.authorization_url(prompt='consent')
+                print("\n" + "="*60)
+                print("PLEASE OPEN THIS URL IN YOUR BROWSER:")
+                print(auth_url)
+                print("="*60 + "\n")
+
+                # Try to open browser, but don't fail if it doesn't work
+                creds = flow.run_local_server(port=0, open_browser=True)
             
             # Save credentials
             with open(token_path, 'w') as token:
